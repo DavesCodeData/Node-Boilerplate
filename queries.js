@@ -3,5 +3,5 @@ const getStudent = "SELECT * FROM student_info";
 
 module.exports = {
     getStudent,
-   // addip,
+    addip,
 };

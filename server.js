@@ -47,19 +47,19 @@ app.use(express.json());
     //    console.log(payload);
     //});
 
-    // Middleware to log IP address added 7-14-23
-    //app.use((req, res, next) => {
-    //    const ipAddress = req.ip;
-    //    const logEntry = `${new Date().toISOString()} - IP: ${ipAddress}\n`;
+    //Middleware to log IP address added 7-14-23
+    app.use((req, res, next) => {
+       const ipAddress = req.ip;
+       const logEntry = `${new Date().toISOString()} - IP: ${ipAddress}\n`;
 
-    //    fs.appendFile('access.log', logEntry, (err) => {
-    //        if (err) {
-    //            console.error('Error writing to log file:', err);
-    //        }
-    //    });
+       fs.appendFile('access.log', logEntry, (err) => {
+           if (err) {
+               console.error('Error writing to log file:', err);
+           }
+       });
 
-    //    next();
-    //});
+       next();
+    });
 
     //app.get("/", (req, res) => {
     //    res.send("Hello World!");
