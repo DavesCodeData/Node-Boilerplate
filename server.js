@@ -1,79 +1,36 @@
 const express = require('express');
-const studentRoutes = require('./src/student/routes');
-const cors = require('cors');
-//const fs = require('fs');//for middleware
-const { Pool } = require('pg');//need library to load into script to save ip info to database
+const studentRoutes = require('./src/student/routes');//import the exported router object
 
+//new route added 8-28-23
+const contactroutes = require('./src/student/contactroutes');
 const app = express();
 const port = 3000;
 
-app.use(cors());
+const bodyParser = require('body-parser');
+const cors = require('cors');
 
-app.use(express.json());
+app.use(cors());//added8-25-23
+app.use(bodyParser.json());
 
-//const { Pool } = require('pg');//added 7/17/23
+//middle ware
+app.use(express.json());//allows us to post and get json from our end points 
 
-//const satelize = require('satelize');//added 7/17/23 critical volnerabilities
-//app.use((req, res, next) => {
-//    const ipAddress = req.ip;
+app.use(express.static("MyWebsite"));//frontend to display website
 
-//    satelize.satelize({ ip: ipAddress }, (err, payload) => {
-//        if (err) {
-//            console.error('Error retrieving geolocation:', err);
-//            next(); // Proceed to the next middleware or route
-//            return;
-//        }
+app.use("/students", studentRoutes);//create the route that leads to student routes listen for /students
 
-//        req.geolocation = payload; // Store the geolocation data in the request object
-//        next(); // Proceed to the next middleware or route
-//    });
+//cross origin resources sharing issues cors issues
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    next();
+})
 
-//    app.get('/example', (req, res) => {
-//        const geolocation = req.geolocation;
-//        // Use the geolocation data as needed
-//        console.log(geolocation);
+app.use('/api', contactroutes); // Use the contact routes
 
-//        // Send a response
-//        res.json({ geolocation });
-//    });
 
-    //satelize method that works
-    //satelize.satelize({ ip: '8.8.8.8' }, (err, payload) => {
-    //    if (err) {
-    //        console.error('Error retrieving geolocation:', err);
-    //        return;
-    //    }
+//for signup
+//app.use('/api', studentRoutes);
 
-    //    console.log(payload);
-    //});
-
-    // Middleware to log IP address added 7-14-23
-    //app.use((req, res, next) => {
-    //    const ipAddress = req.ip;
-    //    const logEntry = `${new Date().toISOString()} - IP: ${ipAddress}\n`;
-
-    //    fs.appendFile('access.log', logEntry, (err) => {
-    //        if (err) {
-    //            console.error('Error writing to log file:', err);
-    //        }
-    //    });
-
-    //    next();
-    //});
-
-    //app.get("/", (req, res) => {
-    //    res.send("Hello World!");
-    //})
-
-    //app.get('/getData', (req, res) => {
-    //    res.json({
-    //        "statusCode": 200,
-    //        "statusMessage":"SUCCESS"
-    //    })
-    //})
-
-    app.use(express.static("frontend"));
-
-    app.use('/api/v1/student', studentRoutes);
-
-    app.listen(port, () => console.log(`app listennig on port ${port}`));
+app.listen(port, () => console.log(`app listening on port ${port}`));
