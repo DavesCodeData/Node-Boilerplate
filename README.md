@@ -2,14 +2,17 @@ Here is a node boiler plate I created to run my Angular applications on.
 This has the static build of the default Anuglar applciatoin.
 
 To run the server you must first have installed node.
-In the terminal type: npm install
+First make sure you have Node installed on your machine. 
+Go to: https://nodejs.org/
+Install node then follow next steps.
+Step 1: In the terminal type: npm install
 
 Then you can run the server with one command.
-In the terminal type: node ./server
+Step 2: In the terminal type: node ./server
 
 You should now be running on localhost://3000
 
-Type localhost://3000 in to your browser to see the application.
+Step 3: Type localhost://3000 in to your browser to see the application.
 
 It will show you the Angular default page.
 
