@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 //middle ware
 app.use(express.json());//allows us to post and get json from our end points 
 
-app.use(express.static("MyWebsite"));//frontend to display website
+app.use(express.static("frontend"));//frontend to display website
 
 app.use("/students", studentRoutes);//create the route that leads to student routes listen for /students
 
