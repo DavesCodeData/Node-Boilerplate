@@ -1,5 +1,5 @@
 Here is a node boiler plate I created to run my Angular applications on.
-This has the static build of the default anuglar applciatoin.
+This has the static build of the default Anuglar applciatoin.
 
 To run the server you must first have installed node.
 In the terminal type: npm install
@@ -24,6 +24,6 @@ Simply past those into frontend on this Node server and you will have the beginn
 
 You will have to fill out your own information for you own Postgres database under the db.js file in the root of this folder.
 
-Then save and run the server with agian: node ./server
+Then save and run the server again with: node ./server
 
 Enjoy!
