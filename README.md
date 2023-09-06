@@ -14,6 +14,7 @@ Type localhost://3000 in to your browser to see the application.
 It will show you the Angular default page.
 
 To change this take one of my Angular applications and run a build on it.
+Here is a link to one such application: https://github.com/DavesCodeData/Davids-Website.git
 
 To run a build command in Angular follow these instructions.
 In the Angular terminal type: ng build
