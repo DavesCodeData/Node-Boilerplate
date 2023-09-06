@@ -20,7 +20,7 @@ In the Angular terminal type: ng build
 
 Then located the dist folder and copy all the created files.
 
-Simply past those into frontend on this Node server and you will have the beginnings of a NodeAngularPostgreSQL stack.
+Simply paste those into frontend on this Node server and you will have the beginnings of a NodeAngularPostgreSQL stack.
 
 You will have to fill out your own information for you own Postgres database under the db.js file in the root of this folder.
 
