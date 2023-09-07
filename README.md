@@ -13,6 +13,8 @@ Install node then follow next steps.
 
 Step 1: In the terminal type: `npm install`
 
+If you don't know how to open the terminal and you are using VS Code just press `ctrl + backtick` 
+
 Then you can run the server with one command.
 
 Step 2: In the terminal type: `node ./server`
