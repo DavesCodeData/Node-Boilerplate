@@ -16,7 +16,7 @@ You should now be running on localhost://3000
 
 Step 3: Type localhost://3000 in to your browser to see the application.
 
-It will show you the Angular default page.
+It will show you the Angular default page because, that is the build file I have installed for your default view.
 
 To change this take one of my Angular applications and run a build on it.
 Here is a link to one such application: https://github.com/DavesCodeData/Davids-Website.git
