@@ -2,7 +2,7 @@
 
 Here is a node boiler plate I created to run my Angular applications. The API of this server is configured to work with my various Angular builds.
 
-I configured this to have the static build of the default Anuglar applciation.
+I configured this to have the static build of the default Anuglar application.
 
 # Run the Backend
 
