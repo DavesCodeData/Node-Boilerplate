@@ -4,7 +4,7 @@ const studentRoutes = require('./src/student/routes');//import the exported rout
 //new route added 8-28-23
 const contactroutes = require('./src/student/contactroutes');
 const app = express();
-const port = 3000;
+const port = 3001;
 
 const bodyParser = require('body-parser');
 const cors = require('cors');
