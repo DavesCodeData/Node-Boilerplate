@@ -1,8 +1,13 @@
-Here is a node boiler plate I created to run my Angular applications on.
-This has the static build of the default Anuglar applciatoin.
+# My custom NodeJS server
 
-To run the server you must first have installed node.
-First make sure you have Node installed on your machine. 
+Here is a node boiler plate I created to run my Angular applications. The API of this server is configured to work with my various Angular builds.
+
+I configured this to have the static build of the default Anuglar applciation.
+
+# Run the Backend
+
+To run the server you must have node installed.
+Before starting make sure you have Node installed on your machine. 
 Go to: https://nodejs.org/
 Install node then follow next steps.
 
