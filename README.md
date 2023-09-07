@@ -7,7 +7,7 @@ I configured this to have the static build of the default Anuglar application.
 # Run the Backend
 
 To run the server you must have node installed.
-Before starting make sure you have Node installed on your machine. 
+Before starting, make sure you have Node installed on your machine. 
 Go to: https://nodejs.org/
 Install node then follow next steps.
 
